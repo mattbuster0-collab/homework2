@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matthew Schultz – Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header, main, footer { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header h1 { font-size: 2.2rem; margin: 8px 0 0; }
+    header p { color: var(--muted); margin: 6px 0 0; }
+
+    .grid { display: grid; gap: 18px; }
+    @media (min-width: 900px){ .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+    section { background: rgba(17,24,39,0.7); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+    section h2 { margin: 0 0 10px; font-size: 1.4rem; }
+    .muted { color: var(--muted); }
+
+    table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); }
+    thead th { text-align: left; font-weight: 700; background: #0b1324; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    tbody tr:hover { background: rgba(56,189,248,0.06); }
+
+    ul, ol { margin: 8px 0 0 18px; }
+    .skill-groups { display: grid; gap: 10px; }
+    @media (min-width: 700px){ .skill-groups { grid-template-columns: repeat(3, 1fr); } }
+
+    .project-gallery { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    figure { margin: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #0b1324; }
+    figure img { width: 100%; height: 160px; object-fit: cover; display: block; }
+    figcaption { padding: 8px 10px; font-size: 0.92rem; color: var(--muted); }
+
+    .contact a { display: inline-block; margin-right: 16px; margin-bottom: 8px; }
+
+    .download-btn { display: inline-block; padding: 10px 14px; border-radius: 10px; background: var(--accent); color: #001018; font-weight: 700; }
+    .download-btn:hover { filter: brightness(1.05); text-decoration: none; }
+
+    footer { color: var(--muted); text-align: center; padding-bottom: 48px; }
+    nav a { margin-right: 14px; }
+    .pill { display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); font-size:12px; }
+
+    .resume-preview { background: #0b1324; border: 1px solid var(--border); padding: 16px; border-radius: 12px; margin-top: 16px; max-height: 400px; overflow-y: auto; }
+    .resume-preview h3 { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="muted" aria-label="Primary">
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#resume">Resume</a>
+    </nav>
+
+    <h1>Matthew Schultz</h1>
+    <p>Web Developer in Training</p>
+    <p>
+      Hey there! My name is <strong>Matt Schultz</strong>. I love computer science!
+      I’m currently practicing <em>web development</em> and building out this portfolio for CS212.
+    </p>
+  </header>
+
+  <main class="grid grid-2">
+
+    <section id="education">
+      <h2>Education</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Degree / Program</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Northern Arizona University (NAU)</td>
+            <td>Bachelor in Applied Computer Science</td>
+            <td>2023 – 2027 (currant)</td>
+          </tr>
+          <tr>
+            <td>Central High School</td>
+            <td>High School Diploma</td>
+            <td>2014 – 2018</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Company / Org</th>
+            <th>Role</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NAU – CS212</td>
+            <td>Web Development Student</td>
+            <td>4 months (current)</td>
+          </tr>
+          <tr>
+            <td>Personal Projects</td>
+            <td>Frontend Practice (HTML/CSS/JS)</td>
+            <td>Ongoing</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-groups">
+        <div>
+          <h3>Languages & Tools</h3>
+          <ul>
+            <li><strong>HTML</strong> – <em>Great CS212 Student!</em></li>
+            <li><mark>CSS</mark> – Eager To Learn!</li>
+            <li><b>JavaScript</b> – Taken a course at NAU</li>
+            <li><i>Python</i> – Taken a course at NAU</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Frameworks & Technologies</h3>
+          <ul>
+            <li>Bootstrap (beginner)</li>
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Soft Skills</h3>
+          <ol>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+            <li>Team Collaboration</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3>Portfolio Website <span class="muted">— first time creating a website!</span></h3>
+        <div class="project-gallery">
+          <figure>
+            <img src="project-1a.jpg" alt="Homepage hero section of my portfolio" />
+            <figcaption>Homepage hero section</figcaption>
+          </figure>
+          <figure>
+            <img src="project-1b.jpg" alt="Projects grid showing thumbnails" />
+            <figcaption>Projects grid</figcaption>
+          </figure>
+          <figure>
+            <img src="project-1c.jpg" alt="Contact form and footer area" />
+            <figcaption>Contact & footer</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:mbs348@nau.edu">mbs348@nau.edu</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+15207057644">(520) 705-7644</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/mattbuster0-collab/" target="_blank" rel="noopener">github.com/mattbuster0-collab</a></p>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Download my resume as a PDF:</p>
+      <a class="download-btn" href="Matthew_Schultz_Resume.pdf" download>
+        Download – Matthew Schultz Resume (PDF)
+      </a>
+
+      <div class="resume-preview">
+        <h3>Resume Preview</h3>
+        <p><strong>Matthew Schultz</strong><br>5250 E Cortland Blvd., Flagstaff, AZ 86004<br>(520)-705-7644</p>
+
+        <h4>Skills</h4>
+        <ul>
+          <li>Prior active duty army service member</li>
+          <li>Law enforcement / correctional officer experience</li>
+          <li>Supervisor experience</li>
+          <li>Advanced computer skills</li>
+          <li>Strong written and verbal communication</li>
+          <li>Safety knowledge</li>
+          <li>Fast learner, dependable, strong team player</li>
+        </ul>
+
+        <h4>Work History</h4>
+        <p><strong>Active Duty Army Service Member (12D)</strong>, 11/2020 – 07/2021<br>
+        Conducted reconnaissance, demolition, salvage underwater operations; trained in scuba & deep-sea diving.</p>
+
+        <p><strong>Correctional Officer</strong>, 12/2018 – 06/2019<br>
+        Arizona Department of Corrections, Florence, AZ — Oversaw inmate safety, de-escalation, and accountability.</p>
+
+        <p><strong>Transportation Officer</strong>, 08/2021 – 11/2022<br>
+        Core Civic — Transported inmates for court, intake, release, and emergency medical needs.</p>
+
+        <p><strong>Kennel Technician</strong>, 11/2023 – 05/2024<br>
+        Coconino Humane Society — Ensured animal welfare, administered medications, maintained facility cleanliness.</p>
+
+        <p><strong>Lube Technician</strong>, 05/2018 – 08/2018<br>
+        Jiffy Lube — Performed oil changes, preventive maintenance, and ensured safety compliance.</p>
+
+        <h4>Education</h4>
+        <p>High School Diploma, Florence High School, 2018</p>
+        <p>Current full-time student at Northern Arizona University, Applied Computer Science</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Matthew Schultz • Built for CS212 Homework 2</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
